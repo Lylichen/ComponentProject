@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
-import Loading1 from '@/page/loading-1.vue'
+
+// 引入页面
+const carousel = resolve => { require(['@/page/example0.vue'], resolve) }
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/loading-1',
-      name: 'Loading1',
-      component: Loading1
+      path: '/carousel',
+      name: 'carousel',
+      component: carousel
     }
   ]
 })

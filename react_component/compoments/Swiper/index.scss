@@ -1,0 +1,92 @@
+.prize-show {
+  height: 100%;
+}
+.list-wrap {
+  width: 100%;
+  height: 100%;
+  // padding: .4rem 0 .3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100vw;
+  overflow: hidden;
+  padding: 0;
+  .pre,
+  .next {
+    background-color: none;
+    width: .6rem;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .pre {
+    padding-left: .08rem;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAIVBMVEUAAAD////////////////////////////////////////PIev5AAAAC3RSTlMAzAQLoZCejT05MHpM91EAAABjSURBVDjLYxjSgLMJuzhzopgCVgkzQcEJ2DUICi7AoUEcl4YgbBImgoKiCtg0OA6kBnFcGopI0cCUiEMDB0IDYQlMowhbjnAuoRDBDJJBqQWefAgnOMwkSjhRI7IBzowzNAEAHXcXGY/a60cAAAAASUVORK5CYII=') no-repeat center center;
+    background-size: .48rem .48rem;
+  }
+  .next {
+    padding-right: .08rem;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAKlBMVEUAAAD///////////////////////////////////////////////////+Gu8ovAAAADnRSTlMAzAQLoJCdjTkNPTA/Pldr3XkAAABlSURBVDjLYxiiQLcBuzhTopgBVgkOQcFkrBLcgoI4tBQKCjpjlVAVFBTBqoUpcMhpUQdqmYBVC9D7nri0iCng0rKAJAmEUYQtRziXgAcxg2RoaEAkOMJJFJGoScsGDDoNDEMZAADkthduaER2TwAAAABJRU5ErkJggg==')no-repeat center center;
+    background-size: .48rem .48rem;
+  }
+  .list-inner {
+    flex: 1;
+    height: inherit;
+    overflow: hidden;
+    background: transparent;
+  }
+  .list {
+    height: 100%;
+    display: flex;
+    transition: transform .8s ease-in-out;
+    // padding-right: .3rem;
+    // padding-top: .1rem;
+    box-sizing: border-box;
+    padding-top: .12rem;
+    .item {
+      box-sizing: border-box;
+      .img {
+        width: 0.72rem;
+        height: 0.72rem;
+        overflow: hidden;
+        position: relative;
+        box-sizing: border-box;
+        background: url('../../../assets/images/index/prize_icon_bg.png')no-repeat center center;
+        background-color: rgba(255,255,255,0.3);
+        background-size: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        .eleimg-img {
+          background-color: transparent;
+        }
+      }
+      .name {
+        font-size: .24rem;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: .34rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: center;
+      }
+      &.active {
+        .img {
+          border: .02rem solid #ebdd63;
+        }
+      }
+    }
+  }
+}
+
+@keyframes showfn {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
